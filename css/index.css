@@ -2,8 +2,130 @@
 	font-family: "Segoe UI";
 	src: url("fonts/Segoe UI.ttf");
 }
+
 body {
-	 padding: 0;
-	 margin: 0;
+	padding: 0;
+	margin: 0;
 	font-family: Segoe UI;
+	background-color: #5f5d5d69;
+}
+
+.profile_name {
+	text-shadow: 10px 10px 12px #6b68689e;
+	animation-duration: 0.8s;
+	animation-name: slide-left;
+	-webkit-animation-fill-mode: forwards;
+}
+/*Page View*/
+#wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	background-attachment: fixed;
+	/*background-image: url('../images/as.png');*/
+}
+#wrapper .section {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+
+/*Grid view for tiles*/
+
+.outer_container {
+	padding : 10px 10px 63px 10px;
+	margin: auto;
+}
+
+.inner_container {
+	display : grid;
+	grid-template-columns : repeat(1, 4fr 2fr 3fr 2fr);
+	grid-gap : 5px;
+	grid-auto-rows : minmax(115px, auto);
+	animation-duration: 0.5s;
+	animation-name: slide-left;
+    /*margin-left: 100px;*/
+   -webkit-animation-fill-mode: forwards;
+}
+
+.inner_container > div {
+	background-color : #d7dde2d9;
+	color : black;
+	font-family : Segoe UI;
+	padding : 5px;
+	font-size : 16px;
+	box-sizing: border-box;
+	font-family: Segoe UI semibold;
+	box-shadow: 10px 10px 45px #8888889e;
+
+}
+
+.tile_5 {
+	grid-row : 2/4;
+	background-size: 490px 305px;
+	box-shadow: inset 0 60px 39px -1px rgb(12, 12, 12)
+}
+
+/*Icons*/
+.education_icon {
+	height: 40px;
+    padding: 20px 0px 0px 105px;
+}
+
+.monitor_icon {
+	height: 40px;
+    padding: 70px 0px 0px 105px;
+}
+
+.user_icon {
+	height: 40px;
+    padding: 18px 0px 0px 38px;
+}
+.technology_icon {
+	height: 40px;
+    padding: 18px 0px 0px 70px;
+}
+/*Icons*/
+#landing_img_1 {
+	position : absolute;
+	top : 400;
+	left : 0;
+	right : 0;
+	bottom : 0;
+	width: 110px;
+	height: 110px ;
+	object-fit : cover;
+	pointer-events : none;
+	-webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.5));
+}
+#landing_img_2 {
+	position : absolute;
+	top : 100;
+	left : 0;
+	right : 0;
+	bottom : 0;
+	width: 200px;
+	height: 100px ;
+	object-fit : cover;
+	pointer-events : none;
+	z-index: -1;
+	-webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.5));
+
+}
+@-webkit-keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
 }
